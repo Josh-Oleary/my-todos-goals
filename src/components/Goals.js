@@ -5,6 +5,7 @@ import {
   handleAddGoal,
   handleDeleteGoal
 } from '../actions/goals'
+import './SectionStyles.css'
 
 class Goals extends React.Component {
   addItem = (e) => {
@@ -23,19 +24,20 @@ class Goals extends React.Component {
 
   render(){
     return(
-      <div>
-      <h1>Goals</h1>
-      <input 
-        type="text"
-        placeholder="Add Goal"
-        ref={(input) => this.input = input}
-      />
-      <button onClick={this.addItem}>Add Goal</button>
+      <div className='section-container'>
+        <h1 className='section-header'>Goals</h1>
+        <input 
+          className='section-input'
+          type="text"
+          placeholder="Add Goal"
+          ref={(input) => this.input = input}
+        />
+        <button className='input-button' onClick={this.addItem}>Add Goal</button>
 
-      <List 
-        items={this.props.goals}
-        remove={this.removeItem}  
-      />
+        <List 
+          items={this.props.goals}
+          remove={this.removeItem}  
+        />
       </div>
     )
   }

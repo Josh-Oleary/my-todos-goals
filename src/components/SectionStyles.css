@@ -1,0 +1,30 @@
+.section-header {
+  text-align: center;
+  color: rgb(229, 229, 229);
+}
+.section-input {
+  border: none;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  outline: none;
+  font-size: 1.5em;
+  width: 8em;
+  background-color: transparent;
+  color: rgb(229, 229, 229);
+}
+.input-button {
+  background-color: rgb(229, 229, 229);
+  height: 2em;
+  width: 6em;
+  border: none;
+  border-radius: 10px;
+  margin-left: 1em;
+  box-shadow: 3px 3px 10px;
+  transition: 250ms;
+}
+.input-button:hover {
+  background-color: rgb(99, 99, 99);
+  cursor: pointer;
+}
+.input-button:active {
+  box-shadow: 1px 1px 5px;
+}

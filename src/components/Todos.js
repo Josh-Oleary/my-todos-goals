@@ -6,6 +6,7 @@ import {
   handleToggle,
 } from '../actions/todos'
 import List from './List'
+import './SectionStyles.css'
 
 class Todos extends React.Component {
       
@@ -26,14 +27,15 @@ class Todos extends React.Component {
   }
   render(){
     return(
-      <div>
-        <h1>Todo List</h1>
+      <div className='section-container'>
+        <h1 className='section-header'>Todos</h1>
         <input
+          className='section-input'
           type='text'
           placeholder='Add Todo'
           ref={(input) => this.input = input}
         />
-        <button onClick={this.addItem}>Add Todo</button>
+        <button className='input-button' onClick={this.addItem}>Add Todo</button>
 
       <List 
         items={this.props.todos}

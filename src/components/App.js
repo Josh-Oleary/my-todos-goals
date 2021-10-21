@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import ConnectedTodos from './Todos'
 import ConnectedGoals from './Goals'
 import { handleInitialData } from '../actions/shared'
+import './App.css'
 
 class App extends Component {
   componentDidMount() {
@@ -16,7 +17,7 @@ class App extends Component {
       return <h3>Loading...</h3>
     }
     return (
-      <div>
+      <div className='page-container'>
         <ConnectedTodos />
         <ConnectedGoals />
       </div>
